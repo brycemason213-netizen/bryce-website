@@ -1,0 +1,228 @@
+---
+import WritingLayout from "../layouts/WritingLayout.astro";
+---
+
+<WritingLayout title="Writing | Bryce Mason">
+  <section class="page">
+    <section class="page-head">
+      <p class="mini-label">Writing</p>
+      <h1>Notes on venture capital, climate tech, finance, and related industries.</h1>
+      <p class="intro">
+        A space for short writing, observations, and ideas as I continue learning
+        and building my perspective. Some sections are still taking shape.
+      </p>
+    </section>
+
+    <section class="writing-section">
+      <div class="section-header">
+        <p class="mini-label">Sections</p>
+        <h2>Current writing areas</h2>
+      </div>
+
+      <div class="writing-grid">
+        <a class="writing-card" href="/writing/vc-notes">
+          <p class="tag">Venture Capital</p>
+          <h3>VC Notes</h3>
+          <p>
+            Thoughts on venture capital, startups, investing, and what I am
+            learning about the industry.
+          </p>
+        </a>
+
+        <a class="writing-card" href="/writing/climate-tech-notes">
+          <p class="tag">Climate Tech</p>
+          <h3>Climate Tech Notes</h3>
+          <p>
+            Notes on climate-related industries, business models, market trends,
+            and questions I find interesting.
+          </p>
+        </a>
+
+        <div class="writing-card static-card">
+          <p class="tag">In Progress</p>
+          <h3>More Writing Coming Soon</h3>
+          <p>
+            I plan to expand this section over time with additional short posts,
+            reactions, and research-based notes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reading-section">
+  <div class="section-header">
+    <p class="mini-label">Reading</p>
+    <h2>What I’m reading</h2>
+  </div>
+
+  <div class="reading-card">
+    <div class="reading-list">
+      <div class="reading-item">
+        <h3>The Business of Venture Capital</h3>
+        <p class="author">by Mahendra Ramsinghani</p>
+        <p>
+          I am reading this to better understand how venture firms are
+          structured, how funds work, and how investors think about the
+          business of VC beyond just deals.
+        </p>
+      </div>
+
+      <div class="reading-item">
+        <h3>Too Big to Fail</h3>
+        <p class="author">by Andrew Ross Sorkin</p>
+        <p>
+          I am interested in the decision-making, institutional pressures,
+          and financial dynamics surrounding the 2008 financial crisis.
+        </p>
+      </div>
+
+      <div class="reading-item">
+        <h3>Endurance: Shackleton’s Incredible Voyage</h3>
+        <p class="author">by Alfred Lansing</p>
+        <p>
+          This is a very different kind of book, but I like it for its
+          focus on leadership, resilience, and decision-making under
+          pressure.
+        </p>
+      </div>
+
+      <div class="reading-item">
+        <h3>Galileo’s Error: Foundations for a New Science of Consciousness</h3>
+        <p class="author">by Philip Goff</p>
+        <p>
+          This one is more philosophical, and I like that it pushes me into
+          a different kind of thinking than the finance and business books.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  </section>
+</WritingLayout>
+
+<style>
+  .page-head {
+    margin-bottom: 36px;
+  }
+
+  .writing-section {
+    margin-bottom: 32px;
+  }
+
+  .reading-section {
+    margin-top: 8px;
+  }
+
+  .section-header {
+    margin-bottom: 18px;
+  }
+
+  .mini-label {
+    font-size: 0.82rem;
+    color: #a9c2af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    line-height: 1.02;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+    color: #f2f2f2;
+  }
+
+  .intro {
+    max-width: 760px;
+    color: #c8cfcc;
+    font-size: 1.06rem;
+  }
+
+  .writing-grid {
+    display: grid;
+    gap: 18px;
+  }
+
+  .writing-card {
+    display: block;
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    border-radius: 28px;
+    padding: 28px;
+    transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+  }
+
+  .writing-card:hover {
+    background: #314138;
+    border-color: #42564a;
+    transform: translateY(-2px);
+  }
+
+  .static-card:hover {
+    background: #1c1f22;
+    border-color: #2a2e33;
+    transform: none;
+  }
+
+  .tag {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: #2c3a31;
+    color: #a9c2af;
+    border: 1px solid #3b4c40;
+    font-size: 0.88rem;
+  }
+
+  .writing-card p,
+  .reading-card p {
+    color: #c8cfcc;
+  }
+
+  .reading-card {
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    border-radius: 28px;
+    padding: 28px;
+  }
+
+  .reading-list {
+    display: grid;
+    gap: 18px;
+  }
+
+  .reading-item + .reading-item {
+    padding-top: 18px;
+    border-top: 1px solid #2a2e33;
+  }
+
+  .author {
+    color: #a9c2af;
+    font-size: 0.96rem;
+    margin: 0 0 8px;
+  }
+
+  .reading-item p:last-child {
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 700px) {
+    .writing-card,
+    .reading-card {
+      padding: 22px 20px;
+      border-radius: 24px;
+    }
+  }
+</style>

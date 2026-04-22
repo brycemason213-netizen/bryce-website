@@ -1,0 +1,52 @@
+---
+import WritingLayout from "../../layouts/WritingLayout.astro";
+---
+
+<WritingLayout title="VC Notes | Bryce Mason">
+  <section class="page">
+    <div class="card">
+      <p class="mini-label">Writing</p>
+      <h1>VC Notes</h1>
+      <p class="intro">
+        A place for short notes on venture capital, startups, investing, and
+        what I am learning as I explore the space.
+      </p>
+
+      <p>
+        This section is still under construction. Over time, I plan to use it
+        for brief posts, observations, and reactions to themes that I find
+        interesting.
+      </p>
+    </div>
+  </section>
+</WritingLayout>
+
+<style>
+  .card {
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    border-radius: 28px;
+    padding: 28px;
+  }
+
+  .mini-label {
+    font-size: 0.82rem;
+    color: #a9c2af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    margin-bottom: 16px;
+    line-height: 1.02;
+  }
+
+  .intro,
+  p {
+    color: #c8cfcc;
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+</style>

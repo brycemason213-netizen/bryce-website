@@ -1,0 +1,52 @@
+---
+import WritingLayout from "../../layouts/WritingLayout.astro";
+---
+
+<WritingLayout title="Climate Tech Notes | Bryce Mason">
+  <section class="page">
+    <div class="card">
+      <p class="mini-label">Writing</p>
+      <h1>Climate Tech Notes</h1>
+      <p class="intro">
+        A place for short notes on climate-related industries, business models,
+        market trends, and questions I want to understand better.
+      </p>
+
+      <p>
+        This section is still under construction. I plan to use it for simple,
+        focused writing as I continue learning more about climate tech and
+        adjacent industries.
+      </p>
+    </div>
+  </section>
+</WritingLayout>
+
+<style>
+  .card {
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    border-radius: 28px;
+    padding: 28px;
+  }
+
+  .mini-label {
+    font-size: 0.82rem;
+    color: #a9c2af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    margin-bottom: 16px;
+    line-height: 1.02;
+  }
+
+  .intro,
+  p {
+    color: #c8cfcc;
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+</style>

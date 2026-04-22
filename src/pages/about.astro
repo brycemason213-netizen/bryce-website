@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About | Bryce Mason">
+  <section class="page">
+    <div class="about-grid">
+      <div class="card about-text">
+        <p class="mini-label">About</p>
+        <h1>Background, interests, and direction.</h1>
+
+        <p>
+          I am a senior at Whitman College majoring in Economics and
+          Environmental Studies with a minor in Finance, graduating in May 2026.
+          My liberal arts background has taught me to move across disciplines
+          and get up to speed quickly, especially in work related to markets,
+          strategy, business decision-making, and environmental systems. I am
+          based in the San Francisco Bay Area.
+        </p>
+
+        <p>
+          My experience includes a Finance and Sales Operations internship at G3
+          Enterprises, finance and strategy project work for Perca, and M&amp;A
+          research for Unsal Partners. Across those roles, I have worked on
+          business analysis, research, and projects that required both
+          structured thinking and practical problem solving.
+        </p>
+
+        <p>
+          What interests me most is work at the intersection of finance,
+          strategy, and emerging industries. I am especially interested in
+          venture capital, climate tech, and analytical roles where I can
+          continue building strong financial judgment while working on real
+          business problems.
+        </p>
+
+        <p>
+          Over time, I hope to keep developing as an investor and analyst while
+          staying close to work that is thoughtful, practical, and tied to
+          long-term trends in business, technology, and the environment.
+        </p>
+      </div>
+
+      <div class="card photo-card">
+        <img src="/linkedinphoto.jpg" alt="Bryce Mason" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) 280px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .card {
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    border-radius: 28px;
+    padding: 28px;
+  }
+
+  .mini-label {
+    font-size: 0.84rem;
+    color: #a9c2af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 24px;
+    line-height: 1.02;
+  }
+
+  p {
+    color: #d0d4d8;
+    font-size: 1.06rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .photo-card {
+    padding: 18px;
+  }
+
+  .photo-card img {
+    width: 100%;
+    max-width: 240px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .photo-card {
+      max-width: 320px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+    }
+  }
+</style>

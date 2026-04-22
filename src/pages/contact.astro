@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact | Bryce Mason">
+  <section class="page">
+    <div class="card">
+      <p class="mini-label">Contact</p>
+      <h1>Get in touch.</h1>
+      <p class="intro">
+        The best way to reach me is by email or LinkedIn.
+      </p>
+
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:brycemason213@gmail.com">
+          <span class="label">Email</span>
+          <span class="value">brycemason213@gmail.com</span>
+        </a>
+
+        <a
+          class="contact-item"
+          href="https://www.linkedin.com/in/bryce-mason/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="label">LinkedIn</span>
+          <span class="value">linkedin.com/in/bryce-mason</span>
+        </a>
+
+        <a class="contact-item" href="tel:+14157474995">
+          <span class="label">Phone</span>
+          <span class="value">+1 (415) 747-4995</span>
+        </a>
+
+        <a
+          class="contact-item"
+          href="/BryceMasonResume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="label">Resume</span>
+          <span class="resume-pill">View PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    border-radius: 30px;
+    padding: 30px;
+  }
+
+  .mini-label {
+    font-size: 0.82rem;
+    color: #a9c2af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 16px;
+    line-height: 1.02;
+  }
+
+  .intro {
+    color: #c8cfcc;
+    margin-bottom: 24px;
+  }
+
+  .contact-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: #2b3036;
+    border: 1px solid #343940;
+    transition: 0.2s ease;
+  }
+
+  .contact-item:hover {
+    background: #314138;
+    border-color: #42564a;
+  }
+
+  .label {
+    color: #a9c2af;
+    font-weight: 600;
+  }
+
+  .value {
+    color: #edf1ef;
+    text-align: right;
+  }
+
+  .resume-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #3a4248;
+    border: 1px solid #495159;
+    color: #f2f2f2;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+
+  .contact-item:hover .resume-pill {
+    background: #42564a;
+    border-color: #51675a;
+    color: #eaf4ec;
+  }
+
+  @media (max-width: 700px) {
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .value {
+      text-align: left;
+    }
+
+    .resume-pill {
+      margin-top: 4px;
+    }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Resume | Bryce Mason">
+  <section class="page">
+    <h1>Resume</h1>
+
+    <p>
+      I am currently building out this section. For now, the best way to request
+      my resume is by email or LinkedIn.
+    </p>
+
+    <p>
+      Soon, this page will include a downloadable PDF version along with a short
+      overview of my experience and coursework.
+    </p>
+
+    <div class="links">
+      <a href="mailto:brycemason213@gmail.com">Email Me</a>
+      <a href="https://www.linkedin.com/in/bryce-mason/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 72px 0;
+    max-width: 760px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+
+  .links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .links a {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 2px;
+  }
+</style>

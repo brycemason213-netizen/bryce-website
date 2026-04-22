@@ -1,0 +1,157 @@
+---
+const { title = "Bryce Mason" } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Work", href: "/experience" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" }
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="pill-nav">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class={`nav-link ${currentPath === item.href ? "active" : ""}`}
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>© Bryce Mason</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    background: #111315;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111315;
+    color: #f2f2f2;
+    min-height: 100vh;
+  }
+
+  :global(a) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :global(p) {
+    line-height: 1.75;
+  }
+
+  :global(h1, h2, h3) {
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: -0.03em;
+    color: #f2f2f2;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: center;
+    padding: 24px 20px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(17, 19, 21, 0.94);
+    backdrop-filter: blur(10px);
+  }
+
+  .pill-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    width: fit-content;
+    max-width: calc(100% - 20px);
+    border-radius: 999px;
+    background: #1c1f22;
+    border: 1px solid #2a2e33;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  }
+
+  .nav-link {
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: #a8adb3;
+    white-space: nowrap;
+    transition: 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #f2f2f2;
+    background: #24282d;
+  }
+
+  .nav-link.active {
+    color: #eaf4ec;
+    background: #314138;
+    border: 1px solid #42564a;
+  }
+
+  .page-shell {
+    max-width: 1180px;
+    margin: 0 auto 72px;
+    padding: 0 28px;
+  }
+
+  .site-footer {
+    padding: 0 28px 28px;
+    text-align: center;
+    color: #7f858c;
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 760px) {
+    .pill-nav {
+      gap: 6px;
+      padding: 6px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav-link {
+      flex: 1;
+      text-align: center;
+      padding: 13px 10px;
+      font-size: 0.9rem;
+    }
+
+    .page-shell {
+      padding: 0 16px;
+    }
+  }
+</style>
