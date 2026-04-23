@@ -60,6 +60,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="/writing">Open Writing</a>
         </p>
       </article>
+
+      <article class="project-card">
+        <p class="tag">Tooling</p>
+        <h2>Startup Sourcing &amp; Market Mapping Tool</h2>
+        <p>
+          A Python-based tool for automated startup sourcing and market mapping.
+          It scrapes company data, generates structured profiles, tags each
+          company by sector and business model, and scores companies against a
+          configurable investment thesis.
+        </p>
+        <p class="status">Under construction.</p>
+      </article>
     </section>
   </section>
 </BaseLayout>
@@ -135,6 +147,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     color: #e8efe9;
     border: 1px solid #3b4c40;
     font-weight: 700;
+  }
+
+  .status {
+    margin-top: 14px;
+    color: #a9c2af;
+    font-style: italic;
   }
 
   @media (max-width: 700px) {
