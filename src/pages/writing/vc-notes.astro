@@ -18,6 +18,18 @@ import WritingLayout from "../../layouts/WritingLayout.astro";
         be taken as investment advice.
       </p>
     </div>
+
+    <section class="posts-section">
+      <a class="post-card" href="/writing/slate-auto">
+        <p class="post-tag">April 25, 2026</p>
+        <h2>Slate Raises $650M, But the Truck Isn't the Point</h2>
+        <p>
+          A note on Slate Auto’s latest raise, the real platform thesis behind
+          the company, and the manufacturing and conversion risks that matter
+          more than the truck itself.
+        </p>
+      </a>
+    </section>
   </section>
 </WritingLayout>
 
@@ -27,7 +39,8 @@ import WritingLayout from "../../layouts/WritingLayout.astro";
     margin: 0 auto;
   }
 
-  .card {
+  .card,
+  .post-card {
     background: #1c1f22;
     border: 1px solid #2a2e33;
     border-radius: 28px;
@@ -53,5 +66,39 @@ import WritingLayout from "../../layouts/WritingLayout.astro";
     color: #c8cfcc;
     font-size: 1.05rem;
     line-height: 1.85;
+  }
+
+  .posts-section {
+    margin-top: 22px;
+  }
+
+  .post-card {
+    display: block;
+    transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+  }
+
+  .post-card:hover {
+    background: #314138;
+    border-color: #42564a;
+    transform: translateY(-2px);
+  }
+
+  .post-tag {
+    color: #a9c2af;
+    font-size: 0.92rem;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 700px) {
+    .card,
+    .post-card {
+      padding: 22px 20px;
+      border-radius: 24px;
+    }
   }
 </style>
