@@ -1,4 +1,6 @@
 ---
+import { Analytics } from "@vercel/analytics/astro";
+
 const { title = "Writing | Bryce Mason" } = Astro.props;
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 
@@ -14,6 +16,7 @@ const backText = isWritingHome ? "← Back to Projects" : "← Back to Writing";
     <title>{title}</title>
     <link rel="icon" type="image/png" href="/BM2.png" />
   </head>
+
   <body>
     <header class="writing-header">
       <a href={backHref} class="back-link">{backText}</a>
@@ -22,6 +25,8 @@ const backText = isWritingHome ? "← Back to Projects" : "← Back to Writing";
     <main class="writing-shell">
       <slot />
     </main>
+
+    <Analytics />
   </body>
 </html>
 
