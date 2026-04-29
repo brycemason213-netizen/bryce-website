@@ -55,8 +55,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <div class="card photo-card">
-        <img src="/linkedinphoto.jpg" alt="Bryce Mason" />
+      <div class="photo-stack">
+        <div class="card photo-card">
+          <img src="/linkedinphoto.jpg" alt="Bryce Mason" />
+        </div>
+
+        <div class="card photo-card">
+          <img src="/fun-photo.jpg" alt="Bryce Mason hiking" />
+        </div>
       </div>
     </div>
   </section>
@@ -103,6 +109,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin-bottom: 20px;
   }
 
+  .photo-stack {
+    display: grid;
+    gap: 18px;
+  }
+
   .photo-card {
     padding: 18px;
   }
@@ -121,8 +132,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       grid-template-columns: 1fr;
     }
 
-    .photo-card {
-      max-width: 320px;
+    .photo-stack {
+      max-width: 360px;
     }
   }
 

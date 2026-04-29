@@ -1,5 +1,5 @@
 ---
-import { Analytics } from "@vercel/analytics/astro";
+import Analytics from "@vercel/analytics/astro";
 
 const { title = "Bryce Mason" } = Astro.props;
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";

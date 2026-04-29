@@ -128,32 +128,42 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
 
       <div class="project-grid">
-        <article class="project-tile">
+        <a
+          class="project-tile"
+          href="/offshore-wind-poster.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <p class="project-tag">Research</p>
           <h3>Offshore Wind Poster</h3>
           <p>
             Research on how offshore wind farm operation may affect fishing
             effort in the Irish Sea.
           </p>
-        </article>
+        </a>
 
-        <article class="project-tile">
+        <a
+          class="project-tile"
+          href="/BryceMasonInternPresentation.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <p class="project-tag">Professional Work</p>
           <h3>G3 Final Presentation</h3>
           <p>
             Internship presentation covering analytics, reporting, and business
             support work.
           </p>
-        </article>
+        </a>
 
-        <article class="project-tile">
+        <a class="project-tile" href="/writing">
           <p class="project-tag">Writing</p>
           <h3>VC &amp; Climate Tech Notes</h3>
           <p>
             A space for short writing on venture capital, climate tech,
             investing, and related industries.
           </p>
-        </article>
+        </a>
       </div>
     </section>
   </section>
@@ -344,6 +354,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .project-tile {
+    display: block;
     padding: 22px;
     border-radius: 22px;
     background: #2b3036;
