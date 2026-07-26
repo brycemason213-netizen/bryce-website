@@ -4,25 +4,13 @@ import Analytics from "@vercel/analytics/astro";
 const { title = "Writing | Bryce Mason" } = Astro.props;
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 
+// The writing index goes back to Projects; every article goes back to the feed.
 let backHref = "/writing";
 let backText = "← Back to Writing";
 
-// Root writing page → back to projects
 if (currentPath === "/writing") {
   backHref = "/projects";
   backText = "← Back to Projects";
-}
-
-// VC articles → back to VC Notes
-else if (currentPath.startsWith("/writing/vc/")) {
-  backHref = "/writing/vc-notes";
-  backText = "← Back to VC Notes";
-}
-
-// Climate articles → back to Climate Notes
-else if (currentPath.startsWith("/writing/climate/")) {
-  backHref = "/writing/climate";
-  backText = "← Back to Climate Tech Notes";
 }
 ---
 
